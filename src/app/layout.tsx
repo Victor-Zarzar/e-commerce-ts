@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import { Metadata } from 'next';
 import clsx from 'clsx';
+import { ClerkProvider } from '@clerk/nextjs';
 
 export const metadata: Metadata = {
   title: 'KeyMart E-Commerce',
@@ -14,12 +15,14 @@ const inter = Inter({ subsets: ['latin'] });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
   return (
-    <html lang="en">
-      <link rel="shortcut icon" href="./favicon.ico"></link>
-      <body className={clsx(inter.className, "bg-slate-700")}>
-        <Navbar />
-        <main className='h-screen p-16'>{children}</main>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <link rel="shortcut icon" href="./favicon.ico"></link>
+        <body className={clsx(inter.className, "bg-slate-700")}>
+          <Navbar />
+          <main className='h-screen p-16'>{children}</main>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import clsx from 'clsx'
 import { ProductType } from '../types/ProductType'
 import ProductImage from './ProductImage'
 
