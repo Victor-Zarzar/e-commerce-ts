@@ -12,6 +12,7 @@
 - Clerk
 - Prisma
 - Vercel Postgres
+- Stripe Payment
 
 ### How to install:
 
