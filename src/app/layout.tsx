@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import { Metadata } from 'next';
 import clsx from 'clsx';
 import { ClerkProvider } from '@clerk/nextjs';
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: 'KeyMart E-Commerce',
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body className={clsx(inter.className, "bg-slate-700")}>
           <Navbar />
           <main className='h-screen p-16'>{children}</main>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
