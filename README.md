@@ -13,9 +13,17 @@
 - Prisma
 - Vercel Postgres
 - Stripe Payment
+- Zunstand state management
+- Docker
+- Docker-Compose
 
 ### How to install:
 
-- Npm i
-- Npm run dev
+- Git Clone
+- With docker and docker-compose installed, the following command moves up the stack:
+- make up and open:
 - localhost:3000
+- Clear the stack:
+- make clean
+- For the stack:
+- make down
