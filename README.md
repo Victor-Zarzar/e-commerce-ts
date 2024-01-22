@@ -27,3 +27,5 @@
 - make clean
 - For the stack:
 - make down
+
+![Screenshot_2024-01-22_08-17-58](https://github.com/Victor-Zarzar/e-commerce-ts/assets/114430780/13f2d929-06a0-465f-94ff-6eb74d0a7ec4)
