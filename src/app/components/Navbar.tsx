@@ -1,22 +1,29 @@
 import Link from 'next/link'
 import React from 'react'
 import { UserButton, SignInButton, SignedIn, SignedOut } from '@clerk/nextjs'
-import { useCartStore } from '@/store';
-import { LuShoppingCart } from "react-icons/lu";
+import Image from 'next/image';
+import Cart from './Cart';
 
 export default function Navbar() {
 
-    // const useStore = useCartStore();
-
     return (
-        <nav className='fixed top-0 w-full flex items-center py-2 px-8 justify-between z-50 bg-slate-800 text-gray-400'>
-            <Link href={'/'} className='uppercase font-bold text-sm h-10 flex items center mt-4'>KeyMart
-            </Link>
-            <div className='flex items-center gap-8 relative'>
-                <div className='flex gap-2'>
-                    <LuShoppingCart className='h-6 w-6' />
-                    <span className='bg-slate-600 text-sm rounded-full h-5 w-5 flex items-center justify-center absolute left-5 bottom-3'>2</span>
+        <nav className='fixed top-0 w-full h-20 flex items-center py-2 px-8 justify-between z-50 bg-slate-800 text-gray-400'>
+            <div className="md:flex items-center justify-between py-5 md:px-10 px-6">
+                <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
+                    <Image
+                        src="/e-commerce.svg"
+                        alt="ecommerce"
+                        width={25}
+                        height={20}
+                        priority
+                        className="h-8 w-7 md:w-8 md:h-8 lg:w-7 lg:h-7 ml-1"
+                    />
+                    <Link href={'/'} className='uppercase font-bold text-sm h-10 flex mt-4'>KeyMart
+                    </Link>
                 </div>
+            </div>
+            <div className='flex items-center gap-8 relative'>
+                <Cart />
                 <SignedIn>
                     <UserButton />
                 </SignedIn>
