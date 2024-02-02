@@ -32,7 +32,7 @@ export default async function App() {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto mt-20">
+      <div className="max-w-7xl mx-auto mt-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6">
           {products.map((product) => (
             <Product key={product.id} product={product} />
